@@ -8,6 +8,10 @@
 #define LED 26
 #define DHTTYPE DHT11
 
+#define BLYNK_TEMPLATE_ID "TMPL5PDD4L_Uq"
+#define BLYNK_TEMPLATE_NAME "2025 PDP ETUDIANTS 02 TD01 GP09"
+#define BLYNK_AUTH_TOKEN "APzEsDHGTt8ugQuFW3tc0jUx3cmZxW_b"
+
 DHT_Unified dht(CAPTEUR, DHTTYPE);
 
 // WiFi credentials go here
