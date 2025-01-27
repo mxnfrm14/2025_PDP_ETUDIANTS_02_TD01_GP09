@@ -26,12 +26,10 @@ DHT_Unified dht(CAPTEUR, DHTTYPE);
 // ...
 // ...
 // Avant le setup
-char ssid[] = "Maelis";
-char pass[] = "fwjd6894";
+char ssid[] = "Maxence";
+char pass[] = "maxence123";
 
 void setup() {
-  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
-  Blynk.run();
   // Setup pins
   pinMode(LED, OUTPUT);
   digitalWrite(LED, LOW);
@@ -42,8 +40,8 @@ void setup() {
 
   // begin the Blynk session
   // ...
-  // ...
-  // ...
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
+  Blynk.run();
 
   // Start listening to the DHT11
   dht.begin();
@@ -76,8 +74,8 @@ void setup() {
 
   // Send data to Blynk
   // ...
-  // ...
-  // ...
+  Blynk.virtualWrite(V1, temp_measure);
+  Blynk.virtualWrite(V0, relative_humidity_measure);
 
   Serial.println("Going to sleep for 5 seconds...");
   delay(100);
